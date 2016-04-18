@@ -1,0 +1,19 @@
+{
+  "name": "cleaning-duty-web-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "",
+    "build": "browserify src/js/index.js -o dist/bundle.js -t [ babelify --presets [ es2015 ] ]"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.7.5",
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "browserify": "^13.0.0"
+  }
+}

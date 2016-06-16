@@ -7,7 +7,7 @@ var Employee = {
 
 var submit = function() {
 	alert("submit");
-	m.request({ method: "POST", url: "http://172.17.0.3:3000/employees", data: { name: Employee.name(), sex: Employee.sex() } });
+	m.request({ method: "POST", url: "http://192.168.56.10:3000/employees", data: { name: Employee.name(), sex: Employee.sex() } });
 };
 
 var EmployeeForm = {

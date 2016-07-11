@@ -31,5 +31,4 @@ var EmployeeForm = {
 };
 
 
-//初期化
-m.mount(document.getElementById("content"), EmployeeForm);
+module.exports = EmployeeForm;

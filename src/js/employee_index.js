@@ -27,5 +27,4 @@ var EmployeeIndex = {
 };
 
 
-//初期化
-m.mount(document.getElementById("content"), EmployeeIndex);
+module.exports = EmployeeIndex;

@@ -17,12 +17,12 @@ var EmployeeIndex = {
 
 	//view
 	view: function(ctrl) {
-          return m("table", [
+          return [m("table", [
             m("thead", m("tr", [m("th", "名前"), m("th", "性別")])),
             m("tbody", ctrl.employees().map((employee) => {
               return m("tr", [m("td", employee.name), m("td", employee.sex)]);
             }))
-          ]);
+          ]), m("a", {href: "/form",  config: m.route}, "新規作成")];
 	}
 };
 

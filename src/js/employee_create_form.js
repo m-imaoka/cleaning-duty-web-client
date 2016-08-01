@@ -10,7 +10,7 @@ var submit = function() {
 	m.request({ method: "POST", url: "http://192.168.56.10:3000/employees", data: { name: Employee.name(), sex: Employee.sex() } });
 };
 
-var EmployeeForm = {
+var EmployeeCreateForm = {
 	//controller
 	controller: function() {
 		Employee.name("aoki");
@@ -31,4 +31,4 @@ var EmployeeForm = {
 };
 
 
-module.exports = EmployeeForm;
+module.exports = EmployeeCreateForm;

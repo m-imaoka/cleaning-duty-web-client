@@ -15,14 +15,14 @@ var EmployeeUpdateForm = {
 
 	//view
 	view: function(ctrl) {
-	  return m("div", [
+	  return [m("div", [
             m("p"),
             m("label", [m("input", { type: "text", name: "name", onchange: m.withAttr("value", employee().name), value: employee().name()}), "Name"]),
             m("label", [m("input", { type: "radio", name: "sex", onchange: m.withAttr("value", employee().sex), value: "1", checked: employee().sex() === "1" }), "Men"]),
             m("label", [m("input", { type: "radio", name: "sex", onchange: m.withAttr("value", employee().sex), value: "2", checked: employee().sex() === "2" }), "Women"]),
             m("label", [m("input", { type: "radio", name: "sex", onchange: m.withAttr("value", employee().sex), value: "3", checked: employee().sex() === "3" }), "Seshimo"]),
 			m("button", { onclick: submit }, "ok")
-        ]);
+        ]),m("button", { onclick: () => { m.route("/"); } }, "戻る")];
 	}
 };
 

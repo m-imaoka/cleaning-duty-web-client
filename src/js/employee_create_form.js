@@ -19,14 +19,14 @@ var EmployeeCreateForm = {
 
 	//view
 	view: function(ctrl) {
-		return m("div", [
+		return [m("div", [
             m("p"),
             m("label", [m("input", { type: "text", name: "name", onchange: m.withAttr("value", Employee.name), value: Employee.name()}), "Name"]),
             m("label", [m("input", { type: "radio", name: "sex", onchange: m.withAttr("value", Employee.sex), value: "1", checked: Employee.sex() === "1" }), "Men"]),
             m("label", [m("input", { type: "radio", name: "sex", onchange: m.withAttr("value", Employee.sex), value: "2", checked: Employee.sex() === "2" }), "Women"]),
             m("label", [m("input", { type: "radio", name: "sex", onchange: m.withAttr("value", Employee.sex), value: "3", checked: Employee.sex() === "3" }), "Seshimo"]),
 			m("button", { onclick: submit }, "ok")
-        ]);
+        ]),m("button", { onclick: () => {m.route("/");}}, "戻る")];
 	}
 };
 

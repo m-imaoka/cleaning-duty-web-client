@@ -23,7 +23,7 @@ var EmployeeIndex = {
               return m("tr", [
                 m("td", employee.name),
                 m("td", employee.sex),
-                m("td", m("a", { onclick: () => { m.route("/" + employee.id + "/edit") } }, "edit")),
+                m("td", m("button", { onclick: () => { m.route("/" + employee.id + "/edit"); return false; } }, "編集")),
                 m("td", m("button", { onclick: () => { m.request({ method: "DELETE", url: "http://192.168.56.10:3000/employees/" + employee.id }) } }, "削除"))
 	      ]);
             }))

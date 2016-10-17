@@ -17,6 +17,7 @@
     "browserify": "^13.0.0"
   },
   "dependencies": {
-    "mithril": "^0.2.4"
+    "mithril": "^0.2.4",
+    "polythene": "^0.2.31"
   }
 }

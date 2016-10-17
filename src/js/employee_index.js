@@ -1,4 +1,6 @@
 import m from "mithril";
+import 'polythene/theme/theme';
+import button from 'polythene/button/button';
 
 var Employee = {
         list: () => {
@@ -23,8 +25,8 @@ var EmployeeIndex = {
               return m("tr", [
                 m("td", employee.name),
                 m("td", employee.sex),
-                m("td", m("button", { onclick: () => { m.route("/" + employee.id + "/edit"); return false; } }, "編集")),
-                m("td", m("button", { onclick: () => { m.request({ method: "DELETE", url: "http://192.168.56.10:3000/employees/" + employee.id }) } }, "削除"))
+                m("td", m.component(button, { label: "編集", raised: true, events: {  onclick: () => { m.route("/" + employee.id + "/edit"); return false; } }})),
+                m("td", m.component(button, { label: "削除", raised: true, events: {  onclick: () => { m.request({ method: "DELETE", url: "http://192.168.56.10:3000/employees/" + employee.id }) } }})),
 	      ]);
             }))
           ]), m("a", {href: "/form",  config: m.route}, "新規作成")];
